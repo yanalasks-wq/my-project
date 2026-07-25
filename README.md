@@ -120,6 +120,8 @@ https://some.company.tld/dor/12345
 
 <img width="1269" height="552" alt="image" src="https://github.com/user-attachments/assets/c01c1afe-398c-4888-9b0c-e3dbc6eb288a" />
 
+<img width="1273" height="565" alt="image" src="https://github.com/user-attachments/assets/a1889146-e8b8-44dd-910a-b3375c494b72" />
+
 ## Висновок
 Під час виконання лабораторної роботи було успішно досліджено вразливість типу IDOR. За допомогою Burp Suite було перехоплено HTTPзапит, змінивши метод на PUT і підставивши числовий ідентифікатор іншого користувача.
 
