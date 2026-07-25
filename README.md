@@ -116,9 +116,9 @@ https://some.company.tld/dor/12345
 
 <img width="1565" height="400" alt="image" src="https://github.com/user-attachments/assets/ba4b1080-1e2b-4820-853f-ac5e387ce131" />
 
-<img width="1416" height="585" alt="image" src="https://github.com/user-attachments/assets/dbbab5b3-2fca-48ea-9bd0-a0045d2b5489" />
-
 <img width="1269" height="552" alt="image" src="https://github.com/user-attachments/assets/c01c1afe-398c-4888-9b0c-e3dbc6eb288a" />
+
+<img width="1416" height="585" alt="image" src="https://github.com/user-attachments/assets/dbbab5b3-2fca-48ea-9bd0-a0045d2b5489" />
 
 <img width="1273" height="565" alt="image" src="https://github.com/user-attachments/assets/a1889146-e8b8-44dd-910a-b3375c494b72" />
 
