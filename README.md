@@ -109,6 +109,11 @@ https://some.company.tld/dor/12345
 <img width="1565" height="400" alt="image" src="https://github.com/user-attachments/assets/ba4b1080-1e2b-4820-853f-ac5e387ce131" />
 
 <img width="1269" height="552" alt="image" src="https://github.com/user-attachments/assets/c01c1afe-398c-4888-9b0c-e3dbc6eb288a" />
+## Етап 3. Експлуатація та модифікація даних (IDOR через PUT-запит)
+Для підтвердження критичності вразливості було здійснено спробу зміни даних іншого користувача в обхід механізмів контролю доступу:
+Запит було перенаправлено до вкладки Repeater.
+HTTP-метод змінено з GET на PUT.
+У тіло запиту (Payload) передано JSON-структуру з новими параметрами:
 
 <img width="1416" height="585" alt="image" src="https://github.com/user-attachments/assets/dbbab5b3-2fca-48ea-9bd0-a0045d2b5489" />
 
