@@ -224,7 +224,48 @@ Data Control Language (DCL) — мова керування даними.
 Застосували техніку ланцюжків запитів query chaining навчилися закривати поточні інструкції та виконувати додаткові команди, зокрема деструктивні операції DDL DROP TABLE, що дозволило керувати об'єктами бази даних та видаляти журнали дій access_log.
 
 
+### Завдання на вибір: Cross Site Scripting (stored)
 
+## Concept
+After looking at Reflected XSS in the previous lesson, we are now going to take a closer look at another form of Cross-Site Scripting Attack: Stored XSS.
 
+## Goals
+    The user will learn what Stored XSS is
+    The user will demonstrate knowledge on:
+        Stored XSS injection
 
+## Stored XSS
+Stored Cross-Site Scripting is different in that the payload is persisted (stored) instead of passed/injected via a link.
+Stored XSS Scenario
+
+    Attacker posts malicious script to a message board
+    Message is stored in a server database
+    Victim reads the message
+    The malicious script embedded in the message board post executes in the victim’s browser
+        The script steals sensitive information, like the session id, and releases it to the attacker
+Victim does not realize attack occurred
+
+## Етап 1.
+See the comments below.
+Add a comment with a JavaScript payload. Again …​ you want to call the webgoat.customjs.phoneHome function.
+As an attacker (offensive security), keep in mind that most apps will not have such a straightforwardly named compromise. Also, you may have to find a way to load your JavaScript dynamically to achieve the goal of extracting data fully.
+
+<img width="1331" height="686" alt="image" src="https://github.com/user-attachments/assets/10d743ea-7d71-4806-89cf-70e9998b9e46" />
+
+Для виконання цього завдання використовуємо техніку збереженого міжсайтового скриптингу Stored XSS та впровадження довільного JavaScript-коду через форму коментарів вебдодатка. За допомогою спеціального тегу <script> вбудовуємо виклик службової функції webgoat.customjs.phoneHome(), яка під час оновлення сторінки звертається до сервера і генерує унікальний ідентифікатор сесії та виводить його у консоль розробника (F12) для успішного проходження верифікації.
+
+Скрипт який потрібно ввести у коментарі: <script>webgoat.customjs.phoneHome()</script>
+
+<img width="553" height="463" alt="image" src="https://github.com/user-attachments/assets/ced104de-e57c-420c-85e4-c26eec7a0107" />
+
+У консолі дивимося ідентифікатор сесії
+
+<img width="1912" height="32" alt="image" src="https://github.com/user-attachments/assets/1bc28554-4346-4b19-8179-937c54d4a8c8" />
+
+Вводжу ідентифікатор: -2010856158
+
+<img width="806" height="155" alt="image" src="https://github.com/user-attachments/assets/378ab2d3-cb29-4bae-be8d-056a6d007686" />
+
+## Висновок
+Для виконання цього завдання використовуємо техніку збереженого міжсайтового скриптингу Stored XSS та впровадження довільного JavaScript-коду через форму коментарів вебдодатка. За допомогою спеціального тегу <script> ми вбудовуємо виклик службової функції webgoat.customjs.phoneHome(), яка під час оновлення сторінки автоматично виконується у браузері, звертається до сервера, генерує унікальний ідентифікатор відповіді та дозволяє отримати необхідні дані для успішного проходження верифікації лабораторної роботи.
 
